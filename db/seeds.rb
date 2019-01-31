@@ -8,12 +8,12 @@
 
 require 'faker'
 
-###user:
-10.times do
-  user = User.create!(city_id: rand(1..City.count), first_name: Faker::LordOfTheRings.character, last_name: Faker::LordOfTheRings.character, description: Faker::LeagueOfLegends.quote, email: Faker::Internet.email, age: rand(18..666))
-end
-
 ###city
 10.times do
 	city = City.create!(title: Faker::LordOfTheRings.location, content: Faker::Hobbit.quote)
+end
+
+###user:
+10.times do
+  user = User.create!(city_id: rand(1..City.count), first_name: Faker::LordOfTheRings.character, last_name: Faker::LordOfTheRings.character, description: Faker::LeagueOfLegends.quote, email: Faker::Internet.email, age: rand(18..666))
 end
